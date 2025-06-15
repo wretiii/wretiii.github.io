@@ -7,16 +7,13 @@ layout: none
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wretiii.com</title>
+  <title>Chris Green</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --blue-dark: #2A495E;
-      --blue-mid: #3E657A;
-      --blue-light: #5E95AE;
-      --text-color: #ffffff;
-      --highlight: #A0C3D2;
-      --bg: #f9f9f9;
+      --blue: #2A495E;
+      --white: #ffffff;
     }
 
     * {
@@ -27,136 +24,115 @@ layout: none
 
     body {
       font-family: 'Open Sans', sans-serif;
-      background-color: var(--bg);
-      color: #333;
+      background-color: var(--white);
+      color: var(--blue);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background-color: var(--blue-dark);
-      color: var(--text-color);
-      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ccc;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
+    .home-logo {
       height: 40px;
-      margin-right: 10px;
     }
 
-    .logo span {
+    .name {
       font-size: 1.5rem;
       font-weight: bold;
+      color: var(--blue);
+    }
+
+    .layout {
+      display: flex;
+      flex: 1;
     }
 
     nav {
-      display: flex;
-      gap: 2rem;
+      width: 200px;
+      padding: 2rem;
+      border-right: 1px solid #ccc;
     }
 
     nav a {
-      color: var(--text-color);
+      display: block;
+      margin-bottom: 1rem;
       text-decoration: none;
+      color: var(--blue);
       font-weight: 600;
-      transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: var(--highlight);
+    main {
+      flex: 1;
+      padding: 2rem;
     }
 
-    .hero {
-      background: linear-gradient(to right, var(--blue-mid), var(--blue-light));
-      color: white;
-      padding: 4rem 2rem;
-      text-align: center;
-      border-bottom-left-radius: 50% 10%;
-      border-bottom-right-radius: 50% 10%;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-    }
-
-    .features {
+    .socials {
       display: flex;
-      justify-content: space-around;
-      background-color: white;
-      padding: 3rem 2rem;
-    }
-
-    .feature-box {
-      background-color: var(--blue-dark);
-      color: white;
+      gap: 1rem;
       padding: 2rem;
-      border-radius: 12px;
-      width: 30%;
-      text-align: center;
+      justify-content: flex-end;
     }
 
-    .feature-box h2 {
-      border-bottom: 2px solid white;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+    .socials a {
+      color: var(--blue);
+      font-size: 1.5rem;
+      text-decoration: none;
     }
 
-    footer {
-      background-color: var(--blue-dark);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .socials {
+        justify-content: center;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="/assets/logo.png" alt="wretiii.com logo">
-      <span>wretiii.com</span>
-    </div>
+    <a href="/">
+      <img src="/assets/logo.png" alt="Home Logo" class="home-logo">
+    </a>
+    <div class="name">Chris Green</div>
+  </header>
+
+  <div class="layout">
     <nav>
-      <a href="/">Home</a>
       <a href="/resume">Resume</a>
       <a href="/cv">CV</a>
       <a href="/speaking">Speaking</a>
       <a href="/projects">Projects</a>
     </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Discover the power of people, business and technology.</h1>
-    <p>wretiii.com bridges the gap between ideas and execution in security and consulting.</p>
-  </section>
+    <main>
+      <p>Welcome to my site. Please explore the links to learn more about my work.</p>
+    </main>
+  </div>
 
-  <section class="features">
-    <div class="feature-box">
-      <h2>Security</h2>
-      <p>Deep expertise in penetration testing, assessments, and risk frameworks.</p>
-    </div>
-    <div class="feature-box">
-      <h2>Cloud</h2>
-      <p>Architecting compliant cloud infrastructure aligned to business goals.</p>
-    </div>
-    <div class="feature-box">
-      <h2>Digital Infrastructure</h2>
-      <p>Guiding resilient IT systems that adapt to evolving security threats.</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 wretiii.com — Built with ❤️ on GitHub Pages
-  </footer>
+  <div class="socials">
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/yourprofile" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://bsky.app/profile/yourprofile" target="_blank" title="Bluesky"><i class="fas fa-cloud"></i></a>
+    <a href="https://mastodon.social/@yourprofile" target="_blank" title="Mastodon"><i class="fab fa-mastodon"></i></a>
+  </div>
 </body>
 </html>
