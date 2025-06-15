@@ -8,67 +8,116 @@
     :root {
       --bg: #0A0A0A;
       --text: #FFFFFF;
-      --accent: #1F1F1F;
-      --link: #9C9CFF;
+      --accent: #1C1C1C;
+      --highlight: #2F2F2F;
+      --link: #A0A0FF;
+      --border: #2A2A2A;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
       display: flex;
       flex-direction: column;
-      height: 100vh;
+      min-height: 100vh;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: var(--accent);
-      padding: 10px 20px;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
     }
+
     .logo {
       display: flex;
       align-items: center;
-    }
-    .logo img {
-      height: 40px;
-      margin-right: 10px;
       cursor: pointer;
     }
-    nav.left-menu {
-      width: 200px;
-      background-color: var(--accent);
-      padding: 20px;
-      min-height: 100vh;
-      box-sizing: border-box;
+
+    .logo img {
+      height: 36px;
+      margin-right: 12px;
     }
+
+    .logo span {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .social-icons a img {
+      height: 22px;
+      margin-left: 15px;
+      filter: brightness(0) invert(1);
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
+    }
+
+    .social-icons a img:hover {
+      opacity: 1;
+    }
+
+    .main-content {
+      display: flex;
+      flex: 1;
+    }
+
+    nav.left-menu {
+      width: 240px;
+      background-color: var(--accent);
+      padding: 30px 20px;
+      border-right: 1px solid var(--border);
+    }
+
     nav.left-menu ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
+
     nav.left-menu li {
-      margin: 15px 0;
+      margin-bottom: 20px;
     }
+
     nav.left-menu a {
-      color: var(--link);
+      color: var(--text);
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
     }
-    .social-icons img {
-      height: 24px;
-      margin-left: 10px;
-      filter: brightness(0) invert(1);
-      cursor: pointer;
+
+    nav.left-menu a:hover {
+      color: var(--link);
     }
-    .main-content {
-      flex: 1;
-      display: flex;
-    }
+
     .page-content {
       flex: 1;
-      padding: 40px;
+      padding: 40px 60px;
+      background-color: var(--bg);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #CCC;
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
