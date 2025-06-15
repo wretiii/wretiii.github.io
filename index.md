@@ -107,10 +107,12 @@ layout: none
 </head>
 <body>
   <header>
+    <div class="left-header">
     <a href="/">
       <img src="/assets/logo.png" alt="Home Logo" class="home-logo">
     </a>
     <div class="name">Chris Green</div>
+    </div>  
   </header>
 
   <div class="layout">
