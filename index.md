@@ -30,6 +30,10 @@ layout: none
       min-height: 100vh;
     }
 
+a, h1, h2, h3, h4, h5, h6, p, div {
+  color: var(--blue);
+}
+
     header {
       display: flex;
       justify-content: space-between;
